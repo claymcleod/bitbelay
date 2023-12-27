@@ -1,0 +1,28 @@
+[package]
+name = "bitbelay-cli"
+version = "0.1.0"
+authors = ["Clay McLeod <clay.l.mcleod@gmail.com>"]
+description = "Command line facilities for the `bitbelay` package ecosystem"
+edition.workspace = true
+license.workspace = true
+documentation.workspace = true
+readme.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+bitbelay-providers = { path = "../bitbelay-providers", version = "0.1.0" }
+bitbelay-report = { path = "../bitbelay-report", version = "0.1.0" }
+bitbelay-suites = { path = "../bitbelay-suites", version = "0.1.0" }
+bitbelay-tests = { path = "../bitbelay-tests", version = "0.1.0" }
+byte-unit = "5.1.2"
+clap.workspace = true
+colored.workspace = true
+ordered-float.workspace = true
+rand.workspace = true
+statrs.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[lints]
+workspace = true

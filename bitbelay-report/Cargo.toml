@@ -1,0 +1,19 @@
+[package]
+name = "bitbelay-report"
+version = "0.1.0"
+authors = ["Clay McLeod <clay.l.mcleod@gmail.com>"]
+description = "Reporting facilities for the `bitbelay` package ecosystem"
+edition.workspace = true
+license.workspace = true
+documentation.workspace = true
+readme.workspace = true
+repository.workspace = true
+
+[dependencies]
+chrono = "0.4.31"
+colored.workspace = true
+nonempty.workspace = true
+textwrap = "0.16.0"
+
+[lints]
+workspace = true
