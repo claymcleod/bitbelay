@@ -1,0 +1,58 @@
+[package]
+name = "bitbelay"
+version = "0.1.0"
+authors = ["Clay McLeod <clay.l.mcleod@gmail.com>"]
+description = "A performance evaluation harness for non-cryptographic hash functions"
+edition.workspace = true
+license.workspace = true
+documentation.workspace = true
+readme.workspace = true
+repository.workspace = true
+
+[dependencies]
+ahash = { version = "0.8.7", optional = true }
+anyhow.workspace = true
+bitbelay-cli = { path = "../bitbelay-cli", version = "0.1.0", optional = true }
+bitbelay-providers = { path = "../bitbelay-providers", version = "0.1.0", optional = true }
+bitbelay-report = { path = "../bitbelay-report", version = "0.1.0", optional = true }
+bitbelay-statistics = { path = "../bitbelay-statistics", version = "0.1.0", optional = true }
+bitbelay-suites = { path = "../bitbelay-suites", version = "0.1.0", optional = true }
+
+[[bin]]
+name = "bitbelay"
+path = "src/main.rs"
+required-features = ["binaries"]
+
+[[example]]
+name = "bitbelay-ahash"
+path = "examples/bitbelay-ahash.rs"
+required-features = ["cli", "hash-ahash"]
+
+[[example]]
+name = "bitbelay-custom"
+path = "examples/bitbelay-custom.rs"
+required-features = ["cli"]
+
+[[example]]
+name = "bitbelay-std"
+path = "examples/bitbelay-std.rs"
+required-features = ["cli"]
+
+[features]
+default = []
+
+# Crates within `bitbelay`.
+cli = ["dep:bitbelay-cli"]
+providers = ["dep:bitbelay-providers"]
+report = ["dep:bitbelay-report"]
+statistics = ["dep:bitbelay-statistics"]
+suites = ["dep:bitbelay-suites"]
+
+# Binaries exported by this crate specifically.
+binaries = ["cli"]
+
+# Hashers for the above CLI tools.
+hash-ahash = ["binaries", "dep:ahash"]
+
+[package.metadata.docs.rs]
+all-features = true

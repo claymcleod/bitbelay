@@ -1,0 +1,26 @@
+[package]
+name = "bitbelay-tests"
+version = "0.1.0"
+authors = ["Clay McLeod <clay.l.mcleod@gmail.com>"]
+description = "Individual tests for the `bitbelay` package ecosystem"
+edition.workspace = true
+license.workspace = true
+documentation.workspace = true
+readme.workspace = true
+repository.workspace = true
+
+[dependencies]
+bitbelay-providers = { path = "../bitbelay-providers", version = "0.1.0" }
+bitbelay-report = { path = "../bitbelay-report", version = "0.1.0" }
+bitbelay-statistics = { path = "../bitbelay-statistics", version = "0.1.0" }
+bitvec.workspace = true
+byte-unit.workspace = true
+colored.workspace = true
+lazy_static.workspace = true
+ordered-float.workspace = true
+rand.workspace = true
+statrs.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true
