@@ -26,7 +26,7 @@ pub struct Args {
     provider: AvailableProviders,
 
     /// Sets the log level to `TRACE`.
-    #[clap(short, long, global = true)]
+    #[clap(long, global = true)]
     trace: bool,
 
     /// Sets the log level to `INFO`.
