@@ -7,8 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2024-01-25
+
+* Bumps `bitbelay-cli` version to v0.1.1.
+
 ## [0.1.0] - 2024-01-24
 
 * Initial release 🎉
 
+[0.1.1]: https://github.com/claymcleod/bitbelay/compare/bitbelay-v0.1.0...bitbelay-v0.1.1
 [0.1.0]: https://github.com/claymcleod/bitbelay/releases/tag/bitbelay-v0.1.0
