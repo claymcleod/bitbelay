@@ -99,3 +99,14 @@ fn main<H: BuildHasher>(build_hasher: H) -> anyhow::Result<()> {
 pub fn wrapper<H: BuildHasher>(build_hasher: H) -> anyhow::Result<()> {
     main(build_hasher)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn verify_cli() {
+        use clap::CommandFactory;
+        Args::command().debug_assert()
+    }
+}
